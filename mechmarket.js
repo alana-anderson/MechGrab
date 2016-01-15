@@ -28,7 +28,8 @@ function getSellingList() {
 						url = child.data.url,
 						created =  util.format(child.data.created),
 						comments = child.data.num_comments;
-
+					
+					// push new item into array 
 					var item = new sellingItem(title, author, domain, url, created, comments);
 					sellingList.push(item);
 	  				//console.log(item);
