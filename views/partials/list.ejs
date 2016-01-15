@@ -1,0 +1,6 @@
+<!-- Render selling items :: views/partials/list.ejs -->
+<ul>
+    <% list.forEach(function(item) { %>
+        <li><a href="<%= item.url %>"><%= item.title %></a></li>
+    <% }); %>
+</ul>
