@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 //http request method get selling mechmarketList
 app.get('/', function(req, res) {
-	res.render('partials/list', {list: mechmarketList});
+	res.render('index', {list: mechmarketList});
 });
 
 app.get('/selling/:id', function(req, res) {
