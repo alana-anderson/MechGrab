@@ -10,7 +10,7 @@ var mechmarketList = list.sellingList;
 var port = process.env.PORT || 3000;
 
 // static files + template engine
-app.use('/assets', express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 //http request method get selling mechmarketList
