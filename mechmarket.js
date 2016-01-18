@@ -33,7 +33,7 @@ function getSellingList() {
 					// push new item into array 
 					var item = new sellingItem(title, author, domain, url, created, comments);
 					sellingList.push(item);
-	  				//console.log(item);
+	  				// check console.log(item);
 				}
       		});
     	})
