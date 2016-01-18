@@ -104,6 +104,24 @@ ul.reset li:last-child{
 .center{
     text-align: center;
 }
+
+.inline-block{
+  display: inline-block;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+p.footer-p{
+  position: relative;
+  top: -10px;
+  left: 20px;
+}
+img.footer-img{
+  opacity: .4;
+}
  /* Button */
  .button {
     display: inline-block;
