@@ -2,39 +2,72 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>mechgrab: Latest Mechanical Keyboard Posts</title>
+		<title>MechGrab : Latest Mechanical Keyboard Posts</title>
 		<meta name="description" content="mechanical, keyboard, keys, artisan, mech">
 		<meta name="author" content="">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- Font -->
-		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 		<!-- CSS -->
-		
 		<link rel="stylesheet" type="text/css" href="public/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="public/css/grid.css" />
 		<!-- favicon -->
-		<link rel="icon" type="image/png" href="../../dist/images/favicon.png">
+		<link rel="icon" type="image/svg+xml" href="public/assets/favicon.gif">
 	</head>
 	<body>
-
+		<!-- Header -->
+		<% include partials/header.ejs %>
+		<!-- if no list -->
+		<% if (typeof list == 'undefined') { %>
+		<!-- Landing -->
+		<div class="row">
+			<div class="grid grid-pad">
+				<div class="col-1-1">
+					<div class="splash-container">
+					    <div class="splash">
+					        <h1 class="splash-head head">mechgrab</h1>
+					        <p class="splash-subhead">
+					            Grab latest. Be the first. Tasty time!
+					        </p>
+					        <p>
+					           	<a href="/selling" class="button raised blue large">Grab List</a>
+					        </p>
+					    </div>
+					</div>
+				</div>
+			</div>
+		<% } %>
+		<!-- if list -->
+		<% if (typeof list != 'undefined') { %>
 		<!-- Begin -->
-		<div class="section hero">
-			<div class="container">
-				<div class="row">
-					<div class="grid grid-pad">
-						<div class="col-1-1">
-							<h1>mechgrab</h1>
-							<h3>Grab latest. Be the first. Tasty time!</h3>
-							<a href="" class="button raised blue large">Grab List</a>
-							<ul>
-								<% include partials/list.ejs %>
-							</ul>
+			<div class="section hero">
+				<div class="">
+					<div class="row">
+						<div class="grid grid-pad">
+							<div class="col-1-1">
+								<div class="center">
+							        <h1 class="splash-head head">mechgrab</h1>
+							       	<p class="splash-subhead">
+							            Latest initialized. Happy hunting!
+							        </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="grid grid-pad">
+							<div class="col-1-12"></div>
+							<div class="col-10-12"
+								<div class="content">
+									<div class="content">
+										<% include partials/list.ejs %>
+									</div>
+								</div>
+							</div>
+							<div class="col-1-12"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		<% } %>
 	</body>
 </html>

@@ -15,11 +15,11 @@ app.set('view engine', 'ejs');
 
 //http request method get selling mechmarketList
 app.get('/', function(req, res) {
-	res.render('index', {list: mechmarketList});
+	res.render('index');
 });
 
-app.get('/selling/:id', function(req, res) {
-	res.json({ firstname: 'john', lastmame:'doe'});
+app.get('/selling', function(req, res) {
+	res.render('', {list: mechmarketList});
 });
 
 app.listen(port); 

@@ -1,11 +1,12 @@
 <!-- Render selling items :: views/partials/list.ejs -->
-<ul>
+<ul class="reset">
     <% list.forEach(function(item) { %>
-        <li><a href="<%= item.url %>"><%= item.title %></a></li>
+        <li><a href="<%= item.url %>"><%= item.title %></a>
 		<% if(item.comments >= 2){ %>
-              <p><%= item.comments %> comments </p>
+              <p class="fade"><%= item.comments %> comments </p>
             <% } else{ %>
-            	<p>[ NEW ] <%= item.comments %> comments -- BE THE FIRST </p>
+            	<p class="fade">[ NEW ] <%= item.comments %> comments -- BE THE FIRST </p>
             <% } %>
+        </li>
     <% }); %>
 </ul>
